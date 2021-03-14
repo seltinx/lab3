@@ -52,10 +52,124 @@
 #
 # to_lubie(slodycze= 'czekolada', rozrywka = ['gry','filmy'])
 
-from teksty import litery
+# from teksty import litery
+#
+# a = "Ala ma kota"
+#
+# litery.wyswietl(a)
+# print(litery.dlugosc(a))
+#
 
-a = "Ala ma kota"
+# Zadanie 1 #
+zadanie1="Zadanie 1"
+print(zadanie1)
 
-litery.wyswietl(a)
-print(litery.dlugosc(a))
+a = [1 - x for x in range(1,11)]
+print(a)
 
+b = [4 ** x for x in range(0,8)]
+print(b)
+
+c = [x for x in b if x % 2 == 0]
+print(c)
+
+znakiod = "-------------------------------------"
+print(znakiod)
+
+# Zadanie 2 #
+
+zadanie2 = "Zadanie 2"
+print(zadanie2)
+
+import random
+listy1 = [random.randint(1, 100) for _ in range(10)]
+listy2 = [x for x in listy1 if x % 2 == 0]
+print(listy2)
+
+znakiod = "-------------------------------------"
+print(znakiod)
+
+# Zadanie 3 #
+
+zadanie3 = "Zadanie 3"
+print(zadanie3)
+
+slownik = {'mleko': '1', 'mąka': 'kg', 'jajka': 'sztuki'}
+print(slownik)
+
+slownik2 = {key: value for value, key in slownik.items()}
+print(slownik2)
+
+znakiod = "-------------------------------------"
+print(znakiod)
+
+# Zadanie 4 #
+
+zadanie4 = "Zadanie 4"
+print(zadanie4)
+
+def check(a, b, c):
+    if a == b == c:
+        return 'Trójkąt równoboczny'
+    if a >= b and a >= c:
+        if a ** 2 == b ** 2 + c ** 2:
+            return 'Trójkąt prostokątny'
+        else:
+            return 'Trójkąt nie jest prostokątny'
+    elif b >= a and b >= c:
+        if b ** 2 == a ** 2 + c ** 2:
+            return 'Trójkąt prostokątny'
+        else:
+            return 'Trójkąt nie jest prostokątny'
+    else:
+        if c ** 2 == b ** 2 + a ** 2:
+            return 'Trójkąt prostokątny'
+        else:
+            return 'Trójkąt nie jest prostokątny'
+
+
+print(check(5, 4, 3))
+
+znakiod = "-------------------------------------"
+print(znakiod)
+
+# Zadanie 5 #
+
+zadanie5 = "Zadanie 5"
+print(zadanie5)
+
+def polet(a=2, b=4, h=6):
+    return ((a + b) * h) / 2
+
+print(polet())
+
+znakiod = "-------------------------------------"
+print(znakiod)
+
+# Zadanie 6 #
+
+zadanie6 = "Zadanie 6"
+print(zadanie6)
+
+def iloczyn(a = 1,b = 2, ilosc = 5):
+    for element in range(a, ilosc):
+        print(element * b)
+
+iloczyn(5,5,11)
+
+znakiod = "-------------------------------------"
+print(znakiod)
+
+# Zadanie 7 #
+
+zadanie7 = "Zadanie 7"
+print(zadanie7)
+
+def funkcja(*liczba):
+    if len(liczba) != 3:
+        print('Błąd!!! Podaj tylko trzy liczby')
+
+    for element in range(liczba[0], liczba[1]):
+        print(element * liczba[1])
+
+funkcja(1,3,4)
